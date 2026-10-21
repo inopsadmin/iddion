@@ -236,7 +236,7 @@ export function EwaPanel() {
               </div>
               <div style={{ border: "1px solid #EBEEF4", borderRadius: "10px", padding: "10px 12px" }}>
                 <div style={{ fontSize: "11px", color: "#6B7286" }}>Requests today</div>
-                <div style={{ fontWeight: "700", fontSize: "20px", color: "#141A3A" }}>[N]</div>
+                <div style={{ fontWeight: "700", fontSize: "20px", color: "#141A3A" }}>247</div>
               </div>
               <div style={{ border: "1px solid #EBEEF4", borderRadius: "10px", padding: "10px 12px" }}>
                 <div style={{ fontSize: "11px", color: "#6B7286" }}>Avg. amount</div>

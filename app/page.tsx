@@ -130,7 +130,7 @@ export default function HomePage() {
             <h2 style={{ fontWeight: "500", fontSize: "clamp(30px, 3.6vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.02em", margin: "0", marginBottom: "40px" }}>Contract labour is becoming your <span style={{ fontFamily: "var(--font-script)", fontWeight: "400", letterSpacing: "0.01em", fontSize: "1.1em" }}>core</span> workforce, not a stopgap.</h2>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "32px" }}>
               <div style={{ flex: "1 1 200px" }}>
-                <div style={{ fontWeight: "400", fontSize: "88px", lineHeight: "1", letterSpacing: "-0.03em", color: "var(--primary)", marginBottom: "16px" }}>[N]+</div>
+                <div style={{ fontWeight: "400", fontSize: "56px", lineHeight: "1", letterSpacing: "-0.03em", color: "var(--primary)", marginBottom: "16px" }}>1,00,000+</div>
                 <div style={{ fontSize: "16px" }}><b style={{ fontWeight: "600" }}>workers managed on IDDION.</b> Permanent and contract on one record.</div>
               </div>
               <div style={{ flex: "1 1 200px", borderLeft: "1px solid var(--primary)", paddingLeft: "24px", display: "flex", flexDirection: "column", gap: "28px" }}>
