@@ -2,41 +2,33 @@
 
 import { useState } from 'react';
 
+/** Newsletter form. Wire `onSubmit` to your email tool (Zoho, Mailchimp, a /api route, etc.). */
 export default function Newsletter() {
-  const [state, setState] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
+  const [done, setDone] = useState(false);
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const email = new FormData(e.currentTarget).get('email');
-    setState('sending');
-    try {
-      // TODO: connect to your CRM / email tool, e.g. POST to /api/subscribe
-      await new Promise((r) => setTimeout(r, 400));
-      console.info('Newsletter signup:', email);
-      setState('done');
-    } catch {
-      setState('error');
-    }
-  }
-
-  if (state === 'done') {
-    return <p className="newsletter__done" role="status">Subscribed. The next brief will reach your inbox.</p>;
-  }
+  if (done) return <div style={{ color: '#FFFFFF' }}>Thanks, you are subscribed.</div>;
 
   return (
-    <form className="newsletter" onSubmit={onSubmit}>
-      <label htmlFor="nl-email" className="sr-only">
-        Work email
-      </label>
-      <input id="nl-email" name="email" type="email" required placeholder="Work email" autoComplete="email" className="newsletter__input" />
-      <button type="submit" className="newsletter__btn" disabled={state === 'sending'}>
-        {state === 'sending' ? 'Subscribing…' : 'Subscribe'}
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        // TODO: send new FormData(e.currentTarget).get('email') to your newsletter provider
+        setDone(true);
+      }}
+      style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 4 }}
+    >
+      <label htmlFor="nl-email" className="sr-only">Work email</label>
+      <input
+        id="nl-email"
+        name="email"
+        type="email"
+        required
+        placeholder="Work email"
+        style={{ flex: '1 1 220px', fontFamily: 'inherit', fontSize: 15, padding: '13px 18px', border: '1px solid #3A4166', background: '#1C2349', color: '#FFFFFF', borderRadius: 999, minHeight: 48 }}
+      />
+      <button type="submit" style={{ fontFamily: 'inherit', fontSize: 15, fontWeight: 600, background: '#FFFFFF', color: '#141A3A', border: 'none', borderRadius: 999, padding: '13px 24px', minHeight: 48, cursor: 'pointer' }}>
+        Subscribe
       </button>
-      {state === 'error' ? (
-        <p className="newsletter__error" role="alert">
-          Couldn’t subscribe. Check the email address and try again.
-        </p>
-      ) : null}
     </form>
   );
 }

@@ -1,0 +1,108 @@
+/* Brand palettes. Pick one in lib/site.ts (THEME). Vivid is the default. */
+
+:root,
+[data-theme="vivid"] {
+  --primary: #3352F0;
+  --violet: #A246E5;
+  --yellow: #FFC93C;
+  --pink: #F28CD0;
+  --green: #22B07D;
+  --coral: #FF6A3D;
+  --tint: #F3F5FE;
+  --violet-soft: #D5ACF3;
+  --yellow-soft: #FFECBB;
+  --pink-soft: #FAD7EF;
+  --green-soft: #CEEEE2;
+  --primary-soft: #CCD4FB;
+  --coral-soft: #FFD2C5;
+  --pink-text: #854D72;
+  --green-text: #187B58;
+  --violet-text: #7A35AC;
+  --primary-text: #3352F0;
+  --coral-text: #B34A2B;
+}
+
+[data-theme="purple-pop"] {
+  --primary: #7B3FE4;
+  --violet: #C08CF5;
+  --yellow: #FFC93C;
+  --pink: #F7A6DA;
+  --green: #22B07D;
+  --coral: #FF6A3D;
+  --tint: #F7F3FD;
+  --violet-soft: #E3CBFB;
+  --yellow-soft: #FFECBB;
+  --pink-soft: #FCE0F2;
+  --green-soft: #CEEEE2;
+  --primary-soft: #DECFF8;
+  --coral-soft: #FFD2C5;
+  --pink-text: #885B78;
+  --green-text: #187B58;
+  --violet-text: #9069B8;
+  --primary-text: #7B3FE4;
+  --coral-text: #B34A2B;
+}
+
+[data-theme="ocean"] {
+  --primary: #1F63E0;
+  --violet: #6C9BF5;
+  --yellow: #86D3E6;
+  --pink: #B9C8FF;
+  --green: #1FA88A;
+  --coral: #F2804F;
+  --tint: #F2F6FD;
+  --violet-soft: #BDD2FB;
+  --yellow-soft: #D5F0F6;
+  --pink-soft: #E7ECFF;
+  --green-soft: #CEECE5;
+  --primary-soft: #C7D8F7;
+  --coral-soft: #FBD9CA;
+  --pink-text: #666E8C;
+  --green-text: #167661;
+  --violet-text: #5174B8;
+  --primary-text: #1F63E0;
+  --coral-text: #A95A37;
+}
+
+[data-theme="sunrise"] {
+  --primary: #C2410C;
+  --violet: #F59E6B;
+  --yellow: #FFD45C;
+  --pink: #F9A8D4;
+  --green: #16A34A;
+  --coral: #E0483B;
+  --tint: #FBF4F0;
+  --violet-soft: #FBD3BC;
+  --yellow-soft: #FFF0C6;
+  --pink-soft: #FDE1F0;
+  --green-soft: #CCEBD7;
+  --primary-soft: #F0D0C2;
+  --coral-soft: #F6C8C4;
+  --pink-text: #895C75;
+  --green-text: #0F7234;
+  --violet-text: #B87750;
+  --primary-text: #C2410C;
+  --coral-text: #9D3229;
+}
+
+[data-theme="forest"] {
+  --primary: #0F766E;
+  --violet: #4FC9B9;
+  --yellow: #FBE38A;
+  --pink: #A7EBC9;
+  --green: #15803D;
+  --coral: #EA7A2A;
+  --tint: #F1F7F6;
+  --violet-soft: #B0E7E0;
+  --yellow-soft: #FEF5D6;
+  --pink-soft: #E0F8EC;
+  --green-soft: #CCE3D4;
+  --primary-soft: #C3DDDB;
+  --coral-soft: #F9D7BF;
+  --pink-text: #5C816F;
+  --green-text: #0F5A2B;
+  --violet-text: #3B978B;
+  --primary-text: #0F766E;
+  --coral-text: #A4551D;
+}
+
