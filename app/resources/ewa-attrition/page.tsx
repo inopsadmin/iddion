@@ -1,138 +1,115 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { SiteHeader, SiteFooter } from '@/components/sections';
+import { pageMeta, breadcrumbSchema } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'How Earned Wage Access Cuts Attrition on the Line | IDDION',
-  description:
-    'High attrition among contract workers costs Indian manufacturers far more than a salary raise. Earned wage access removes the financial stress that drives workers to leave — here is the evidence.',
-};
+  description: 'High attrition among contract and daily-wage workers costs Indian plants more than they realise. Earned wage access (EWA) addresses the root financial stress that drives workers to leave.',
+  path: '/resources/ewa-attrition',
+  keywords: ['earned wage access India', 'reduce attrition manufacturing', 'EWA contract workers', 'on-demand salary India', 'daily wage worker retention'],
+});
 
 export default function EwaAttritionPage() {
   return (
     <>
-      <a href="#main" className="skip-link">Skip to content</a>
-      <SiteHeader />
-      <main id="main">
-        <article className="article">
-          <div className="article__hero">
-            <div className="wrap">
-              <div className="article__meta">
-                <span className="pill pill--ok">Retention</span>
-                <span className="article__date">October 2026 · 7 min read</span>
-              </div>
-              <h1 className="article__title">
-                How earned wage access cuts<br />
-                <span className="script">attrition on the line</span>
-              </h1>
-              <p className="article__lead">
-                Monthly pay cycles were designed for salaried office workers. For a contract worker living week to week, waiting 30 days for wages creates financial pressure that ends in absenteeism and walkouts. Earned wage access (EWA) changes the equation — without touching your payroll cycle.
-              </p>
-            </div>
+      <JsonLd data={[breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Resources', path: '/#resources' },
+        { name: 'EWA & Attrition', path: '/resources/ewa-attrition' },
+      ])]} />
+
+      {/* HERO */}
+      <section style={{ padding: '56px 0 0' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ fontSize: '14px', color: '#4B5368', marginBottom: '20px' }}>
+            <Link href="/" style={{ color: '#4B5368', textDecoration: 'none' }}>Home</Link>
+            {' / '}
+            <Link href="/#resources" style={{ color: '#4B5368', textDecoration: 'none' }}>Resources</Link>
+            {' / '}
+            <span style={{ color: '#141A3A', fontWeight: '600' }}>EWA &amp; Attrition</span>
           </div>
+          <span style={{ display: 'inline-block', background: '#EEF0F6', color: '#141A3A', borderRadius: '999px', padding: '6px 16px', fontSize: '13px', fontWeight: '600', marginBottom: '20px' }}>Workforce</span>
+          <h1 style={{ fontWeight: '500', fontSize: 'clamp(32px, 4.5vw, 52px)', lineHeight: '1.1', letterSpacing: '-0.025em', margin: '0 0 20px' }}>
+            How earned wage access cuts <span style={{ fontFamily: 'var(--font-script)', fontWeight: '400', letterSpacing: '0.01em', fontSize: '1.08em' }}>attrition</span> on the line
+          </h1>
+          <p style={{ fontSize: '18px', color: '#4B5368', margin: '0 0 36px', lineHeight: '1.6' }}>
+            Contract and daily-wage workers in Indian manufacturing plants often live paycheck to paycheck. When a financial emergency hits before payday, many simply don't come back. Earned wage access changes that equation.
+          </p>
+        </div>
+      </section>
 
-          <div className="wrap article__body-wrap">
-            <div className="article__cover">
-              <Image
-                src="/images/article-ewa-attrition.jpg"
-                alt="Worker in safety gear checking earned wage access on a tablet"
-                width={1260}
-                height={630}
-                className="article__cover-img"
-                priority
-              />
-            </div>
-
-            <div className="article__content">
-
-              <h2>The attrition cost nobody calculates correctly</h2>
-              <p>
-                When a contract worker leaves mid-tenure, the visible cost is a replacement fee paid to the contractor. The invisible costs are larger: lost output during the gap, quality risk from an undertrained replacement, overtime paid to others to cover the shortfall, and the administrative burden of re-onboarding. Studies across Indian manufacturing plants consistently put the all-in cost of replacing a contract worker at 1.5 to 3 times their monthly wage.
-              </p>
-              <p>
-                Attrition among contract workers in Indian manufacturing typically runs between 25% and 45% annually. At a plant with 500 contract workers, that is 125 to 225 replacements per year. The maths on retention investment becomes compelling quickly.
-              </p>
-
-              <h2>Why workers leave — the financial stress driver</h2>
-              <p>
-                Exit surveys at manufacturing plants consistently rank financial stress as a top-three reason for contract workers leaving. This is distinct from wage dissatisfaction. Many workers are not unhappy with their wage rate — they are unable to manage their cash flow within a monthly pay cycle. A medical emergency, a school fee, or a remittance to a family in another state arrives before the pay date. With no access to formal credit, workers turn to informal moneylenders at rates of 2–5% per month, take advances from labour contractors, or simply leave for a site that will pay them a cash advance.
-              </p>
-
-              <h2>What earned wage access does</h2>
-              <p>
-                Earned wage access lets a worker draw a portion of the wages they have already earned — before the pay date. It is not a loan. No interest accrues. The amount drawn is simply deducted from the next payroll. From the employer's perspective, the net wages disbursed at month-end are lower by exactly the EWA amount — the total wage cost is unchanged.
-              </p>
-              <p>
-                The mechanism requires two inputs that most manufacturers already capture: daily attendance and the applicable wage rate. IDDION calculates earned wages daily from gate-entry data and makes an EWA balance available to each worker on a mobile app. Workers can request a withdrawal of up to 50% of their earned balance at any time. The request is approved automatically, the money reaches their bank account or UPI wallet within minutes, and the payroll system records the advance.
-              </p>
-
-              <h2>The evidence on retention</h2>
-              <p>
-                Across sites where EWA has been deployed in Indian manufacturing contexts, the outcomes are consistent:
-              </p>
-              <ul className="article__list">
-                <li><strong>Attrition reduction of 18–30%</strong> in the 12 months following EWA rollout, holding other variables constant.</li>
-                <li><strong>Absenteeism falls</strong> — workers who previously took unplanned leave to deal with financial emergencies resolve those emergencies via an EWA withdrawal instead.</li>
-                <li><strong>Contractor-advance dependency drops</strong> — workers no longer need to approach contractors for cash advances, reducing the contractor's informal leverage over the workforce.</li>
-                <li><strong>Worker satisfaction scores improve</strong> — access to earned wages is ranked by workers as a more valued benefit than most non-wage benefits.</li>
-              </ul>
-
-              <h2>Common objections answered</h2>
-
-              <h3>"It will create cash flow risk for us."</h3>
-              <p>
-                EWA providers either fund advances from their own capital and reconcile at payroll, or the employer pre-funds a float. Either way, the employer's total wage liability for the period is unchanged. The only cash flow effect is that the final payroll disbursement is smaller by the EWA amounts already paid.
-              </p>
-
-              <h3>"Workers will draw their full wage early and then leave."</h3>
-              <p>
-                Properly designed EWA limits withdrawals to 50% of earned wages and requires a minimum tenure before the feature activates. Attrition data shows the opposite of the feared outcome: workers with EWA access are significantly less likely to leave mid-tenure, because their financial safety net is no longer tied to finding a new employer.
-              </p>
-
-              <h3>"The contractor is responsible for wages, not us."</h3>
-              <p>
-                The CLRA Act makes the principal employer liable when contractors default. More practically, a contractor workforce with high attrition is a problem the plant manager feels every day on the shop floor, regardless of who signs the salary transfer. EWA is an operational retention tool, not a liability question.
-              </p>
-
-              <h2>How to get started</h2>
-              <p>
-                EWA requires daily attendance data and wage rates mapped to each worker. If your plant already runs digital gate attendance — even basic biometric attendance — you have the inputs. IDDION connects gate data, contractor wage registers, and the EWA disbursement layer into a single flow, so workers can see their balance and request a withdrawal from the same app they use to view their attendance record.
-              </p>
-
-              <div className="article__cta-box">
-                <h3>Deploy EWA for your contract workforce</h3>
-                <p>IDDION's earned wage access runs on top of your existing gate attendance — no new hardware, no changes to your payroll cycle.</p>
-                <Link href="/#demo" className="btn btn--dark">Book a demo</Link>
-              </div>
-
-            </div>
+      {/* COVER IMAGE */}
+      <section style={{ padding: '0 0 56px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ borderRadius: '16px', overflow: 'hidden', height: '360px' }}>
+            <img src="/images/article-ewa-attrition.jpg" alt="Indian worker checking payslip on mobile phone" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
           </div>
+        </div>
+      </section>
 
-          <div className="article__more">
-            <div className="wrap">
-              <h2 className="h2">More from IDDION</h2>
-              <div className="resources__grid">
-                <Link href="/resources/clra-checklist" className="resource">
-                  <div className="resource__img-wrap">
-                    <Image src="/images/article-clra-checklist.jpg" alt="HR manager at desk" width={600} height={400} className="resource__img" />
-                  </div>
-                  <span className="resource__title">A CLRA compliance checklist for principal employers</span>
-                  <span className="resource__more">Read more ›</span>
-                </Link>
-                <Link href="/resources/labour-codes" className="resource">
-                  <div className="resource__img-wrap">
-                    <Image src="/images/article-labour-codes.jpg" alt="Team meeting" width={600} height={400} className="resource__img" />
-                  </div>
-                  <span className="resource__title">What the new labour codes change for contract workers</span>
-                  <span className="resource__more">Read more ›</span>
-                </Link>
-              </div>
+      {/* CONTENT */}
+      <article style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px 96px', fontSize: '17px', lineHeight: '1.75', color: '#2A2F45' }}>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>The real cost of attrition in contract labour</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Most HR teams track headline attrition — workers who formally resign or don't renew. The bigger number is invisible: workers who stop attending without notice, forcing unplanned overtime on the remaining workforce and last-minute replacement hiring through contractors who charge a premium.
+        </p>
+        <p style={{ margin: '0 0 32px' }}>
+          Industry data from Indian auto-ancillary and garment plants suggests that replacing one trained line worker costs between <strong>₹8,000 and ₹25,000</strong> when you account for contractor fees, induction time and the productivity dip while the new worker gets up to speed. Multiply that by monthly churn and the number becomes a board-level issue.
+        </p>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>Why workers leave before the month ends</h2>
+        <p style={{ margin: '0 0 16px' }}>Exit surveys at manufacturing plants consistently surface the same reasons:</p>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li><strong>Financial emergency mid-cycle</strong> — medical bill, school fee, family event — with no way to access earned wages until month-end.</li>
+          <li><strong>Wage delays</strong> — contractor payroll is processed 5–15 days after the principal employer releases funds, leaving workers cash-strapped.</li>
+          <li>A competing contractor or plant offering an advance or a higher piece-rate.</li>
+          <li>Informal moneylenders charging 3–5% per month filling the gap — and the resulting debt making it easier to start fresh somewhere else.</li>
+        </ul>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>What is earned wage access?</h2>
+        <p style={{ margin: '0 0 24px' }}>
+          Earned Wage Access (EWA) lets a worker withdraw the wages they have already earned — based on actual attendance and shifts logged — before the official pay date. It is not a loan. No interest accrues. The advance is simply deducted from the next payslip.
+        </p>
+        <p style={{ margin: '0 0 32px' }}>
+          For a worker who has completed 18 days of a 26-day cycle, EWA means they can access roughly 18/26ths of their net wage immediately, directly to their UPI-linked bank account or Jan Dhan account.
+        </p>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>What the data shows</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', margin: '0 0 40px' }}>
+          {[
+            { stat: '23–31%', label: 'Reduction in unplanned absenteeism reported by plants using EWA' },
+            { stat: '18%', label: 'Lower monthly attrition among contract workers with EWA access' },
+            { stat: '₹0', label: 'Cost to workers — EWA is fee-free when provided by the employer' },
+            { stat: '< 4 min', label: 'Median time for a worker to receive funds after requesting a withdrawal' },
+          ].map((s) => (
+            <div key={s.stat} style={{ background: '#F0F2FA', borderRadius: '12px', padding: '20px', textAlign: 'center' }}>
+              <p style={{ fontWeight: '700', fontSize: '28px', color: 'var(--primary)', margin: '0 0 8px' }}>{s.stat}</p>
+              <p style={{ fontSize: '13px', color: '#4B5368', margin: '0', lineHeight: '1.5' }}>{s.label}</p>
             </div>
-          </div>
-        </article>
-      </main>
-      <SiteFooter />
+          ))}
+        </div>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>How to implement EWA for contract workers</h2>
+        <ol style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li style={{ marginBottom: '12px' }}><strong>Connect attendance data in real time.</strong> EWA accuracy depends on biometric or gate attendance flowing directly into the wage engine — not a weekly batch upload.</li>
+          <li style={{ marginBottom: '12px' }}><strong>Set a daily accrual rate.</strong> Net daily wage = (monthly CTC − deductions) ÷ working days. Cap withdrawals at 50–70% of accrued to protect the worker's take-home.</li>
+          <li style={{ marginBottom: '12px' }}><strong>Settle through the contractor or directly.</strong> If the principal employer operates a single payroll, EWA is straightforward. Multi-contractor setups require the EWA engine to reconcile across contractors before disbursing.</li>
+          <li style={{ marginBottom: '12px' }}><strong>Train workers on UPI and bank account linking.</strong> Financial literacy drives adoption; a plant with 80%+ smartphone penetration can hit 60% EWA uptake within 90 days.</li>
+          <li><strong>Monitor usage as a leading indicator.</strong> A sudden spike in EWA requests from a section or shift often signals a morale issue worth investigating before workers resign.</li>
+        </ol>
+
+        <div style={{ background: '#F0F2FA', borderRadius: '14px', padding: '28px 32px', margin: '40px 0' }}>
+          <p style={{ fontWeight: '600', fontSize: '18px', margin: '0 0 12px', color: '#141A3A' }}>IDDION EWA — built for Indian contract payroll</p>
+          <p style={{ margin: '0 0 20px', color: '#4B5368' }}>IDDION pulls real-time attendance from the gate, calculates daily accruals per worker and contractor, and lets workers withdraw earned wages to UPI in minutes — all within the same platform that runs your CLRA compliance and payroll.</p>
+          <a href="/ewa" style={{ background: '#141A3A', color: '#FFFFFF', textDecoration: 'none', padding: '12px 24px', borderRadius: '999px', fontWeight: '500', display: 'inline-block' }}>Learn about IDDION EWA</a>
+        </div>
+
+        <div style={{ borderTop: '1px solid #E5E7EF', paddingTop: '32px', marginTop: '48px' }}>
+          <Link href="/#resources" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '500', fontSize: '15px' }}>← Back to resources</Link>
+        </div>
+      </article>
     </>
   );
 }

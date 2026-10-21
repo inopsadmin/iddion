@@ -1,143 +1,112 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import { SiteHeader, SiteFooter } from '@/components/sections';
+import { pageMeta, breadcrumbSchema } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
 
-export const metadata: Metadata = {
-  title: 'CLRA Compliance Checklist for Principal Employers | IDDION',
-  description:
-    'A practical checklist covering every CLRA obligation principal employers must meet — from contractor registration and Form V to half-yearly returns and on-site welfare facilities.',
-};
+export const metadata: Metadata = pageMeta({
+  title: 'A CLRA Compliance Checklist for Principal Employers | IDDION',
+  description: 'A practical CLRA compliance checklist for principal employers in India — contractor registration, Form V, Form XIII, PF/ESI deductions and penalty avoidance.',
+  path: '/resources/clra-checklist',
+  keywords: ['CLRA compliance checklist', 'principal employer obligations', 'contract labour regulation act', 'Form V CLRA', 'contractor compliance India'],
+});
 
 export default function ClraChecklistPage() {
   return (
     <>
-      <a href="#main" className="skip-link">Skip to content</a>
-      <SiteHeader />
-      <main id="main">
-        <article className="article">
-          <div className="article__hero">
-            <div className="wrap">
-              <div className="article__meta">
-                <span className="pill pill--info">Compliance</span>
-                <span className="article__date">October 2026 · 8 min read</span>
-              </div>
-              <h1 className="article__title">
-                A CLRA compliance checklist for<br />
-                <span className="script">principal employers</span>
-              </h1>
-              <p className="article__lead">
-                The Contract Labour (Regulation &amp; Abolition) Act places extensive obligations on principal employers — not just on contractors. Here is a structured checklist to keep your plant audit-ready at all times.
-              </p>
-            </div>
+      <JsonLd data={[breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Resources', path: '/#resources' },
+        { name: 'CLRA Compliance Checklist', path: '/resources/clra-checklist' },
+      ])]} />
+
+      {/* HERO */}
+      <section style={{ padding: '56px 0 0' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ fontSize: '14px', color: '#4B5368', marginBottom: '20px' }}>
+            <Link href="/" style={{ color: '#4B5368', textDecoration: 'none' }}>Home</Link>
+            {' / '}
+            <Link href="/#resources" style={{ color: '#4B5368', textDecoration: 'none' }}>Resources</Link>
+            {' / '}
+            <span style={{ color: '#141A3A', fontWeight: '600' }}>CLRA Checklist</span>
           </div>
+          <span style={{ display: 'inline-block', background: '#EEF0F6', color: '#141A3A', borderRadius: '999px', padding: '6px 16px', fontSize: '13px', fontWeight: '600', marginBottom: '20px' }}>Compliance</span>
+          <h1 style={{ fontWeight: '500', fontSize: 'clamp(32px, 4.5vw, 52px)', lineHeight: '1.1', letterSpacing: '-0.025em', margin: '0 0 20px' }}>
+            A CLRA compliance checklist for <span style={{ fontFamily: 'var(--font-script)', fontWeight: '400', letterSpacing: '0.01em', fontSize: '1.08em' }}>principal</span> employers
+          </h1>
+          <p style={{ fontSize: '18px', color: '#4B5368', margin: '0 0 36px', lineHeight: '1.6' }}>
+            The Contract Labour (Regulation &amp; Abolition) Act, 1970 places specific obligations on principal employers. Missing even one can mean penalties, show-cause notices or disruption to your gate. Here is a practical checklist to stay ahead.
+          </p>
+        </div>
+      </section>
 
-          <div className="wrap article__body-wrap">
-            <div className="article__cover">
-              <Image
-                src="/images/article-clra-checklist.jpg"
-                alt="HR manager reviewing CLRA compliance documents at a plant office"
-                width={1260}
-                height={630}
-                className="article__cover-img"
-                priority
-              />
-            </div>
-
-            <div className="article__content">
-
-              <h2>Why principal employers carry the greater risk</h2>
-              <p>
-                Under the CLRA Act 1970, the principal employer is the entity that deploys contract labour — not the contractor who supplies them. When a contractor defaults on wages, PF, ESI, or welfare obligations, the Act makes the principal employer directly liable. Inspectors and labour courts hold the principal to account first. This makes systematic compliance tracking non-negotiable for any plant running contract labour.
-              </p>
-
-              <h2>Registration &amp; licensing</h2>
-              <ul className="article__checklist">
-                <li>Register as principal employer in Form I with the appropriate registering officer before deploying any contract labour.</li>
-                <li>Obtain a registration certificate (Form II) and keep a certified copy at the site at all times.</li>
-                <li>Verify that each contractor holds a valid licence under Form IV before work begins.</li>
-                <li>Renew contractor licences before expiry — lapsed licences make the arrangement illegal and the principal employer liable.</li>
-                <li>Issue Form V (certificate of principal employer) to every contractor before they apply for a licence.</li>
-              </ul>
-
-              <h2>Muster rolls &amp; attendance</h2>
-              <ul className="article__checklist">
-                <li>Maintain a muster roll in Form XVI for each contractor's workers, updated daily.</li>
-                <li>Ensure the contractor maintains Form XVII (wage register) and makes it available for inspection on demand.</li>
-                <li>Cross-check attendance records against your own gate-entry logs at least weekly.</li>
-                <li>Retain muster rolls and wage registers for a minimum of three years.</li>
-              </ul>
-
-              <h2>Wage payment &amp; deductions</h2>
-              <ul className="article__checklist">
-                <li>Verify that wages are paid on or before the 7th of the following month (10th for establishments with 1,000+ workers).</li>
-                <li>Ensure no unauthorised deductions appear in the wage register.</li>
-                <li>Confirm workers are paid at least the applicable minimum wage for the relevant scheduled employment.</li>
-                <li>If the contractor fails to pay wages, discharge the obligation directly and recover from the contractor — the Act requires this.</li>
-              </ul>
-
-              <h2>PF, ESI &amp; statutory deductions</h2>
-              <ul className="article__checklist">
-                <li>Collect proof of PF challan submission from each contractor every month.</li>
-                <li>Cross-verify UAN-linked contributions through the EPFO employer portal.</li>
-                <li>Collect ESI challan proof for contractors with covered workers.</li>
-                <li>Retain copies of all challans for three years minimum.</li>
-              </ul>
-
-              <h2>Welfare facilities</h2>
-              <ul className="article__checklist">
-                <li>Where 100 or more contract workers are employed, provide a canteen on-site or ensure the contractor does.</li>
-                <li>Provide restrooms, latrines, and urinals (separate for men and women) where 20 or more workers are employed.</li>
-                <li>Maintain a first-aid box with prescribed contents for every 150 workers.</li>
-                <li>Ensure drinking water is accessible within 6 metres of any latrine or urinal.</li>
-                <li>Appoint a welfare officer if the headcount crosses thresholds set by the relevant state government.</li>
-              </ul>
-
-              <h2>Returns &amp; notices</h2>
-              <ul className="article__checklist">
-                <li>File a half-yearly return in Form XXIV by 15 February and 15 August each year.</li>
-                <li>Display a notice showing wage rates, hours of work, wages period, and date of payment in a conspicuous place at the worksite.</li>
-                <li>Display the abstract of the CLRA Act and rules at the principal employer's office.</li>
-              </ul>
-
-              <h2>Record-keeping in practice</h2>
-              <p>
-                Paper-based compliance is fragile. A single missing register or an unsigned muster roll can attract a fine and adverse findings in a labour audit. Platforms like IDDION capture attendance at the gate, sync contractor wage data, and auto-generate the reports needed for half-yearly returns — eliminating the last-minute scramble before an inspection.
-              </p>
-
-              <div className="article__cta-box">
-                <h3>See IDDION's compliance module in action</h3>
-                <p>Track CLRA obligations across all contractors and sites from one dashboard — with automatic alerts before deadlines and audit-ready exports.</p>
-                <Link href="/#demo" className="btn btn--dark">Book a demo</Link>
-              </div>
-
-            </div>
+      {/* COVER IMAGE */}
+      <section style={{ padding: '0 0 56px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ borderRadius: '16px', overflow: 'hidden', height: '360px' }}>
+            <img src="/images/article-clra-checklist.jpg" alt="HR manager reviewing CLRA compliance documents at an Indian plant office" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
           </div>
+        </div>
+      </section>
 
-          <div className="article__more">
-            <div className="wrap">
-              <h2 className="h2">More from IDDION</h2>
-              <div className="resources__grid">
-                <Link href="/resources/labour-codes" className="resource">
-                  <div className="resource__img-wrap">
-                    <Image src="/images/article-labour-codes.jpg" alt="Team meeting" width={600} height={400} className="resource__img" />
-                  </div>
-                  <span className="resource__title">What the new labour codes change for contract workers</span>
-                  <span className="resource__more">Read more ›</span>
-                </Link>
-                <Link href="/resources/ewa-attrition" className="resource">
-                  <div className="resource__img-wrap">
-                    <Image src="/images/article-ewa-attrition.jpg" alt="Worker with tablet" width={600} height={400} className="resource__img" />
-                  </div>
-                  <span className="resource__title">How earned wage access cuts attrition on the line</span>
-                  <span className="resource__more">Read more ›</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </article>
-      </main>
-      <SiteFooter />
+      {/* CONTENT */}
+      <article style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px 96px', fontSize: '17px', lineHeight: '1.75', color: '#2A2F45' }}>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>1. Registration as principal employer</h2>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li>Obtain a <strong>Certificate of Registration</strong> under Section 7 of CLRA from the registering officer.</li>
+          <li>Ensure the certificate covers every establishment where contract labour is engaged.</li>
+          <li>Renew before expiry — lapsed registration is a cognisable offence.</li>
+          <li>Display the certificate prominently at the establishment.</li>
+        </ul>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>2. Contractor licence verification</h2>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li>Verify every contractor holds a valid <strong>Form V licence</strong> (issued by the licensing officer).</li>
+          <li>Confirm the licence specifies the correct establishment, trade and maximum number of workers.</li>
+          <li>Re-verify at each renewal cycle — do not assume a contractor who was compliant last year still is.</li>
+          <li>Maintain copies of all contractor licences on file.</li>
+        </ul>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>3. Statutory registers and records</h2>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li><strong>Form XIII</strong> — Register of contractors: name, nature of work, number of workers, period of contract.</li>
+          <li><strong>Form XIV</strong> — Service certificate issued to each contract worker on termination.</li>
+          <li>Ensure contractors maintain Form XVI (muster roll), Form XVII (wages register) and Form XVIII (wage slip).</li>
+          <li>Inspect contractor registers at least once per quarter; note findings.</li>
+        </ul>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>4. Welfare and amenity obligations</h2>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li>If the contractor fails to provide canteen, restrooms, drinking water or first-aid, <strong>the principal employer is liable</strong> to provide them and recover the cost.</li>
+          <li>Audit facilities quarterly against the headcount of contract workers at each site.</li>
+          <li>Maintain inspection records and corrective action logs.</li>
+        </ul>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>5. Wages and PF/ESI compliance</h2>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li>Contract workers must receive at least the <strong>applicable minimum wage</strong> for their category and state.</li>
+          <li>If the contractor defaults on wages, the principal employer must disburse wages and recover them from the contractor.</li>
+          <li>Verify monthly PF (12% employee + 12% employer) and ESI (3.25% employer + 0.75% employee) remittance via ECR and challan copies.</li>
+          <li>Check that the contractor's ESIC sub-code is linked to your establishment.</li>
+        </ul>
+
+        <h2 style={{ fontWeight: '600', fontSize: '24px', margin: '0 0 16px' }}>6. Annual returns and inspections</h2>
+        <ul style={{ paddingLeft: '20px', margin: '0 0 32px' }}>
+          <li>File <strong>Form XXIV</strong> (annual return) with the registering authority by 15 February each year.</li>
+          <li>Prepare a summary of contractors, worker counts and wage data before the labour inspector's visit.</li>
+          <li>Ensure all gate access, biometric and wage records are print-ready at short notice.</li>
+        </ul>
+
+        <div style={{ background: '#F0F2FA', borderRadius: '14px', padding: '28px 32px', margin: '40px 0' }}>
+          <p style={{ fontWeight: '600', fontSize: '18px', margin: '0 0 12px', color: '#141A3A' }}>Keep this checklist current automatically</p>
+          <p style={{ margin: '0 0 20px', color: '#4B5368' }}>IDDION RegX tracks contractor licences, statutory due dates and register completeness in real time — so you always know what's compliant and what needs action before the inspector arrives.</p>
+          <a href="/#demo" style={{ background: '#141A3A', color: '#FFFFFF', textDecoration: 'none', padding: '12px 24px', borderRadius: '999px', fontWeight: '500', display: 'inline-block' }}>Book a demo</a>
+        </div>
+
+        <div style={{ borderTop: '1px solid #E5E7EF', paddingTop: '32px', marginTop: '48px' }}>
+          <Link href="/#resources" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '500', fontSize: '15px' }}>← Back to resources</Link>
+        </div>
+      </article>
     </>
   );
 }
