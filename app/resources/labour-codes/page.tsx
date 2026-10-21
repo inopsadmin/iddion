@@ -6,7 +6,7 @@ import { SiteHeader, SiteFooter } from '@/components/sections';
 export const metadata: Metadata = {
   title: 'What the New Labour Codes Change for Contract Workers | IDDION',
   description:
-    'India's four new labour codes consolidate 29 legacy Acts. Here is what they mean for contract workers, principal employers, and the contractors who supply them.',
+    "India's four new labour codes consolidate 29 legacy Acts. Here is what they mean for contract workers, principal employers, and the contractors who supply them.",
 };
 
 export default function LabourCodesPage() {
