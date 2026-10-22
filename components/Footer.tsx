@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 16, paddingTop: 28, borderTop: '1px solid #2C3460', fontSize: 14 }}>
-          <div>© {new Date().getFullYear()} IDDION, a product of Inddion IT Solutions Pvt. Ltd., Bengaluru.</div>
+          <div>© {new Date().getFullYear()} IDDION, a product of Iddion IT Solutions Pvt. Ltd., Bengaluru.</div>
           <div style={{ display: 'flex', gap: 24 }}>
             <a href="#privacy" style={{ color: '#C7CBDA' }}>Privacy</a>
             <a href="#terms" style={{ color: '#C7CBDA' }}>Terms</a>
