@@ -10,7 +10,7 @@ export const SITE_NAME = 'IDDION';
 
 export const ORG = {
   name: 'IDDION',
-  legalName: 'Iddion IT Solutions Pvt. Ltd.',
+  legalName: 'Iddion Solutions Pvt. Ltd.',
   parentUrl: 'https://inops.tech',
   foundingDate: '2014',
   email: 'support@inops.tech',
