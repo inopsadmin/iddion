@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: { default: SITE_NAME, template: '%s' },
   description: 'Workforce management software for Indian plants: contract labour, HRIS, payroll and earned wage access.',
   applicationName: SITE_NAME,
-  publisher: 'InOps IT Solutions Pvt. Ltd.',
+  publisher: 'Inddion IT Solutions Pvt. Ltd.',
   formatDetection: { telephone: false },
   openGraph: { type: 'website', siteName: SITE_NAME, locale: 'en_IN' },
   twitter: { card: 'summary_large_image' },
