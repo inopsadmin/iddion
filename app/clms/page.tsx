@@ -35,7 +35,7 @@ export default function ClmsPage() {
             <h1 style={{ fontWeight: "500", fontSize: "clamp(40px, 5vw, 60px)", lineHeight: "1.08", letterSpacing: "-0.025em", margin: "0 0 28px" }}>Labour management software for your <span style={{ fontFamily: "var(--font-script)", fontWeight: "400", letterSpacing: "0.01em", fontSize: "1.08em" }}>contract</span> workforce</h1>
             <p style={{ fontSize: "18px", margin: "0 0 36px", maxWidth: "520px" }}>IDDION RegX is a contract labour management system built for Indian plants. Gate to payroll, CLRA compliance included, on one platform.</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
-              <a href="#demo" style={{ background: "#141A3A", color: "#FFFFFF", textDecoration: "none", padding: "14px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "48px", boxSizing: "border-box" }}>Get in touch <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <a href="/contact" style={{ background: "#141A3A", color: "#FFFFFF", textDecoration: "none", padding: "14px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "48px", boxSizing: "border-box" }}>Get in touch <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"></path>
               </svg></a>
               <a href="#roi" style={{ background: "#FFFFFF", color: "#141A3A", border: "1px solid #141A3A", textDecoration: "none", padding: "13px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", minHeight: "48px", boxSizing: "border-box" }}>Calculate ROI</a>
@@ -344,7 +344,7 @@ export default function ClmsPage() {
                 <div style={{ color: "#B7B9C2", fontSize: "13px" }}>Measured outcomes on comparable deployments.</div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "auto" }}>
                   <a href="#calculator" style={{ background: "var(--primary)", color: "#FFFFFF", textDecoration: "none", padding: "12px 20px", borderRadius: "8px", fontWeight: "600" }}>Calculate your savings →</a>
-                  <a href="#demo" style={{ color: "#FFFFFF", border: "1px solid #6A6A70", textDecoration: "none", padding: "11px 20px", borderRadius: "8px", fontWeight: "600" }}>Book a demo</a>
+                  <a href="/contact" style={{ color: "#FFFFFF", border: "1px solid #6A6A70", textDecoration: "none", padding: "11px 20px", borderRadius: "8px", fontWeight: "600" }}>Book a demo</a>
                 </div>
               </div>
             </div>
