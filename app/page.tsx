@@ -36,7 +36,7 @@ export default function HomePage() {
               <a href="#platform" style={{ background: "#141A3A", color: "#FFFFFF", textDecoration: "none", padding: "14px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "48px", boxSizing: "border-box" }}>Learn more <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"></path>
               </svg></a>
-              <a href="#demo" style={{ background: "#FFFFFF", color: "#141A3A", border: "1px solid #141A3A", textDecoration: "none", padding: "13px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", minHeight: "48px", boxSizing: "border-box" }}>Book a demo</a>
+              <a href="/contact" style={{ background: "#FFFFFF", color: "#141A3A", border: "1px solid #141A3A", textDecoration: "none", padding: "13px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", minHeight: "48px", boxSizing: "border-box" }}>Book a demo</a>
             </div>
           </div>
           <div style={{ flex: "1 1 460px", minWidth: "0", position: "relative", padding: "24px 40px 40px 40px", boxSizing: "border-box" }}>
@@ -227,13 +227,8 @@ export default function HomePage() {
             </div>
             <div style={{ flex: "1 1 480px", minWidth: "0", display: "flex", alignItems: "center", gap: "0", overflowX: "auto" }}>
               <div style={{ flex: "none", width: "150px", height: "150px", borderRadius: "50%", background: "var(--tint)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ width: "104px", height: "104px", borderRadius: "50%", background: "#141A3A", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg aria-hidden="true" width="46" height="46" viewBox="0 0 34 34" fill="none">
-                    <rect x="1" y="1" width="14" height="14" rx="4" style={{ fill: "var(--primary)" }}></rect>
-                    <rect x="19" y="1" width="14" height="14" rx="7" style={{ fill: "var(--yellow)" }}></rect>
-                    <rect x="1" y="19" width="14" height="14" rx="7" style={{ fill: "var(--pink)" }}></rect>
-                    <rect x="19" y="19" width="14" height="14" rx="4" style={{ fill: "var(--violet)" }}></rect>
-                  </svg>
+                <div style={{ width: "140px", height: "140px", borderRadius: "50%", background: "#FFFFFF", boxShadow: "0 4px 24px rgba(20,26,58,0.12)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", padding: "10px" }}>
+                  <img src="/logo-iddion.jpg" alt="IDDION" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                 </div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
@@ -398,7 +393,7 @@ export default function HomePage() {
             <div style={{ background: "var(--yellow-soft)", borderRadius: "22px", padding: "40px", display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
               <div style={{ fontWeight: "500", fontSize: "26px" }}>See IDDION in action</div>
               <div style={{ fontSize: "16px" }}>A 30-minute walkthrough using your own shift pattern and vendor structure.</div>
-              <a href="#demo-form" style={{ marginTop: "12px", background: "#141A3A", color: "#FFFFFF", textDecoration: "none", padding: "14px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "48px", boxSizing: "border-box" }}>Request a demo <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <a href="/contact" style={{ marginTop: "12px", background: "#141A3A", color: "#FFFFFF", textDecoration: "none", padding: "14px 26px", borderRadius: "999px", fontWeight: "500", display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "48px", boxSizing: "border-box" }}>Request a demo <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"></path>
               </svg></a>
             </div>

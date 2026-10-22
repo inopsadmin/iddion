@@ -12,14 +12,9 @@ export function ogImage({ eyebrow, title, subtitle }: { eyebrow: string; title: 
         <div style={{ position: 'absolute', right: 0, bottom: 0, width: 330, height: 200, background: '#FFC93C', display: 'flex' }} />
         <div style={{ position: 'absolute', right: 60, top: 150, width: 300, height: 330, background: '#3352F0', borderRadius: 28, display: 'flex' }} />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', width: 56, height: 56, gap: 6 }}>
-            <div style={{ width: 25, height: 25, borderRadius: 7, background: '#3352F0' }} />
-            <div style={{ width: 25, height: 25, borderRadius: 13, background: '#FFC93C' }} />
-            <div style={{ width: 25, height: 25, borderRadius: 13, background: '#F28CD0' }} />
-            <div style={{ width: 25, height: 25, borderRadius: 7, background: '#A246E5' }} />
-          </div>
-          <div style={{ fontSize: 44, fontWeight: 800, color: '#141A3A', letterSpacing: 2 }}>IDDION</div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="https://inops.tech/logo-iddion.jpg" alt="IDDION" width={220} height={78} style={{ objectFit: 'contain' }} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 640 }}>
