@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Figtree, Caveat_Brush } from 'next/font/google';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import FloatingActions from '@/components/FloatingActions';
 import JsonLd from '@/components/JsonLd';
 import { organizationSchema } from '@/lib/seo';
 import { SITE_NAME, SITE_URL, THEME } from '@/lib/site';
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
