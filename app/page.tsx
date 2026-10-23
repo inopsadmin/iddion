@@ -207,13 +207,39 @@ export default function HomePage() {
               <span>Pharma & Process</span>
             </div>
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "24px 48px", alignItems: "center" }}>
-            <span style={{ fontWeight: "800", fontSize: "24px", color: "#8A90A2", whiteSpace: "nowrap" }}>Ashok Leyland</span>
-            <span style={{ fontWeight: "800", fontSize: "24px", color: "#8A90A2", whiteSpace: "nowrap" }}>Foxconn</span>
-            <span style={{ fontWeight: "800", fontSize: "24px", color: "#8A90A2", whiteSpace: "nowrap" }}>HAL</span>
-            <span style={{ fontWeight: "800", fontSize: "24px", color: "#8A90A2", whiteSpace: "nowrap" }}>BHEL</span>
-            <span style={{ fontWeight: "800", fontSize: "24px", color: "#8A90A2", whiteSpace: "nowrap" }}>Apollo</span>
-            <span style={{ fontWeight: "800", fontSize: "24px", color: "#8A90A2", whiteSpace: "nowrap" }}>Ramky</span>
+          {/* AUTO-SCROLL LOGO STRIP */}
+          <div style={{ overflow: "hidden", position: "relative" }}>
+            {/* fade edges */}
+            <div aria-hidden="true" style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "80px", background: "linear-gradient(to right, #ffffff, transparent)", zIndex: 2 }} />
+            <div aria-hidden="true" style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "80px", background: "linear-gradient(to left, #ffffff, transparent)", zIndex: 2 }} />
+            <div style={{ display: "flex", gap: "0", animation: "marquee 28s linear infinite" }}>
+              {[
+                { src: "/logos/ashok-leyland.png", alt: "Ashok Leyland" },
+                { src: "/logos/hal.png",           alt: "HAL" },
+                { src: "/logos/bhel.png",          alt: "BHEL" },
+                { src: "/logos/bfw.png",           alt: "BFW" },
+                { src: "/logos/midhani.png",       alt: "Midhani" },
+                { src: "/logos/skf.png",           alt: "SKF" },
+                { src: "/logos/wheels-india.png",  alt: "Wheels India" },
+                { src: "/logos/ge-vernova.svg",    alt: "GE Vernova" },
+                { src: "/logos/aam.jpg",           alt: "AAM" },
+                /* duplicate for seamless loop */
+                { src: "/logos/ashok-leyland.png", alt: "Ashok Leyland" },
+                { src: "/logos/hal.png",           alt: "HAL" },
+                { src: "/logos/bhel.png",          alt: "BHEL" },
+                { src: "/logos/bfw.png",           alt: "BFW" },
+                { src: "/logos/midhani.png",       alt: "Midhani" },
+                { src: "/logos/skf.png",           alt: "SKF" },
+                { src: "/logos/wheels-india.png",  alt: "Wheels India" },
+                { src: "/logos/ge-vernova.svg",    alt: "GE Vernova" },
+                { src: "/logos/aam.jpg",           alt: "AAM" },
+              ].map((logo, i) => (
+                <div key={i} style={{ flex: "none", width: "200px", height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "0 28px" }}>
+                  <img src={logo.src} alt={logo.alt} className="customer-logo" style={{ maxHeight: "44px", maxWidth: "140px", width: "auto", objectFit: "contain" }} />
+                </div>
+              ))}
+            </div>
+            <style>{`@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`}</style>
           </div>
         </div>
       </section>
