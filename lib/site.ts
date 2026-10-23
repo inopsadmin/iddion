@@ -15,10 +15,10 @@ export const ORG = {
   foundingDate: '2014',
   email: 'support@inops.tech',
   address: {
-    streetAddress: 'Sy. No. 60/A, Second Floor, Bommasandra Industrial Area, Jigani Road',
+    streetAddress: '921, Laxmi Tower, 5th Main Rd, Sector 7, HSR Layout',
     addressLocality: 'Bengaluru',
     addressRegion: 'Karnataka',
-    postalCode: '560099',
+    postalCode: '560102',
     addressCountry: 'IN',
   },
   /** Official profiles (LinkedIn, YouTube, etc.). Strongly helps search and AI engines identify the brand. */

@@ -416,7 +416,10 @@ export default function ClmsPage() {
               <img src="/logos/ashok-leyland.png" alt="Ashok Leyland" width={464} height={156} loading="lazy" decoding="async" style={{ maxWidth: "100%", maxHeight: "34px", objectFit: "contain", width: "auto", height: "auto" }} />
             </div>
             <div style={{ background: "#FFFFFF", border: "1px solid #E6E9F1", borderRadius: "14px", height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px 20px", boxSizing: "border-box" }}>
-              <img src="/logos/foxconn.png" alt="Foxconn" width={448} height={64} loading="lazy" decoding="async" style={{ maxWidth: "75%", maxHeight: "22px", objectFit: "contain", width: "auto", height: "auto" }} />
+              <img src="/logos/ge-vernova.svg" alt="GE Vernova" loading="lazy" decoding="async" style={{ maxWidth: "100%", maxHeight: "34px", objectFit: "contain", width: "auto", height: "auto" }} />
+            </div>
+            <div style={{ background: "#FFFFFF", border: "1px solid #E6E9F1", borderRadius: "14px", height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px 20px", boxSizing: "border-box" }}>
+              <img src="/logos/aam.jpg" alt="AAM (American Axle & Manufacturing)" loading="lazy" decoding="async" style={{ maxWidth: "100%", maxHeight: "44px", objectFit: "contain", width: "auto", height: "auto" }} />
             </div>
             <div style={{ background: "#FFFFFF", border: "1px solid #E6E9F1", borderRadius: "14px", height: "72px", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px 20px", boxSizing: "border-box" }}>
               <img src="/logos/hal.png" alt="Hindustan Aeronautics Limited (HAL)" width={535} height={219} loading="lazy" decoding="async" style={{ maxWidth: "100%", maxHeight: "34px", objectFit: "contain", width: "auto", height: "auto" }} />

@@ -125,7 +125,7 @@ export default function ContactPage() {
                     </svg>
                   ),
                   title: 'Office',
-                  content: '60A, Bommasandra Link Road, Bommasandra Industrial Area, Bengaluru, Karnataka 560099',
+                  content: '921, Laxmi Tower, 5th Main Rd, Sector 7, HSR Layout, Bengaluru, Karnataka 560102',
                   href: undefined,
                 },
                 {
@@ -135,8 +135,8 @@ export default function ContactPage() {
                     </svg>
                   ),
                   title: 'Email',
-                  content: 'contact@inops.tech',
-                  href: 'mailto:contact@inops.tech',
+                  content: 'hello@iddion.com',
+                  href: 'mailto:hello@iddion.com',
                 },
                 {
                   icon: (
